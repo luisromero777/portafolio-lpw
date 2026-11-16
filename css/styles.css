@@ -1,0 +1,421 @@
+/* ==========================================================
+   Portafolio de JosÃ© Luis Romero Soto
+   DiseÃ±o mobile-first con Flexbox y Grid.
+   Un breakpoint principal: 768px.
+   ========================================================== */
+
+:root {
+  --tinta: #111827;
+  --suave: #4b5563;
+  --azul: #1f4e9e;
+  --azul-oscuro: #0b2a5e;
+  --azul-claro: #eaf1fc;
+  --oscuro: #0f172a;
+  --gris: #f3f4f6;
+  --borde: #d1d5db;
+  --foco: #f2a900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  background-color: #ffffff;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: var(--azul);
+}
+
+a:hover {
+  color: var(--azul-oscuro);
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+summary:focus {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Enlace para saltar al contenido ---------- */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background-color: #ffffff;
+  color: var(--tinta);
+  font-weight: 700;
+  border: 2px solid var(--tinta);
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ---------- Encabezado y navegaciÃ³n (Flexbox) ---------- */
+.site-header {
+  background-color: var(--oscuro);
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.marca:hover {
+  color: #ffffff;
+}
+
+.marca-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--azul);
+  font-size: 0.95rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 0.65rem 0.85rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+  border-bottom-color: #9db9e8;
+}
+
+.menu a[aria-current="page"] {
+  border-bottom-color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---------- Portada (hero) ---------- */
+.hero {
+  background-color: var(--azul-claro);
+  padding: 2.5rem 0;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  max-width: 18ch;
+}
+
+.hero .lead {
+  max-width: 60ch;
+  font-size: 1.15rem;
+  color: var(--suave);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid var(--azul);
+  border-radius: 6px;
+  background-color: var(--azul);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  color: #ffffff;
+}
+
+.btn-secundario {
+  background-color: #ffffff;
+  color: var(--azul);
+}
+
+.btn-secundario:hover {
+  background-color: var(--azul);
+  color: #ffffff;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  padding: 2.5rem 0;
+}
+
+.seccion-gris {
+  background-color: var(--gris);
+}
+
+.intro {
+  max-width: 62ch;
+  color: var(--suave);
+}
+
+/* Rejillas (Grid): una columna en mÃ³vil */
+.grid-2,
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+.tarjeta p:last-child {
+  margin-bottom: 0;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--azul-claro);
+  color: var(--azul-oscuro);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.pasos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: paso;
+}
+
+.pasos li {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 3.75rem;
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  counter-increment: paso;
+}
+
+.pasos li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--azul);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.datos {
+  margin: 0;
+}
+
+.datos dt {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+.datos dd {
+  margin: 0 0 0.75rem;
+}
+
+.tecnologias {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tecnologias li {
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--suave);
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.campo label {
+  font-weight: 700;
+}
+
+.ayuda {
+  font-size: 0.9rem;
+  color: var(--suave);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  color: var(--tinta);
+  background-color: #ffffff;
+  border: 2px solid #6b7280;
+  border-radius: 6px;
+}
+
+.campo textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+/* ---------- Pie de pÃ¡gina ---------- */
+.site-footer {
+  padding: 1.5rem 0;
+  background-color: var(--oscuro);
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #ffffff;
+}
+
+/* ==========================================================
+   Breakpoint: pantallas de 768px o mÃ¡s (tabletas y computadoras)
+   ========================================================== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero {
+    padding: 4.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .seccion {
+    padding: 3.5rem 0;
+  }
+
+  .grid-2 {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
