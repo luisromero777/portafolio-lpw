@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | José Luis Romero</title>
+  <meta name="description" content="Formulario de contacto de José Luis Romero.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231f4e9e'/%3E%3Ctext x='16' y='21' font-size='14' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="contenedor header-inner">
+      <a class="marca" href="index.html">
+        <span class="marca-icono" aria-hidden="true">JL</span>
+        <span>José Luis Romero</span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios y proyectos</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <h1 id="titulo-contacto">Contacto</h1>
+        <p class="lead">
+          Cuéntame qué necesitas y te respondo lo antes posible.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-formulario">
+      <div class="contenedor grid-2">
+        <div>
+          <h2 id="titulo-formulario">Envíame un mensaje</h2>
+          <form class="formulario" action="#" method="post">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" aria-describedby="ayuda-correo" required>
+              <span class="ayuda" id="ayuda-correo">Solo lo usaré para responderte.</span>
+            </div>
+            <div class="campo">
+              <label for="motivo">Motivo del mensaje</label>
+              <select id="motivo" name="motivo">
+                <option value="sitio">Quiero un sitio web</option>
+                <option value="colaborar">Quiero colaborar en un proyecto</option>
+                <option value="otro">Otro motivo</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+            </div>
+            <div>
+              <button class="btn" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+        <aside class="tarjeta" aria-labelledby="titulo-otros">
+          <h3 id="titulo-otros">Otras formas de conocerme</h3>
+          <dl class="datos">
+            <div>
+              <dt>Ubicación</dt>
+              <dd>Monterrey, Nuevo León, México</dd>
+            </div>
+            <div>
+              <dt>Mi empresa</dt>
+              <dd><a href="https://bloodshot.io">bloodshot.io</a></dd>
+            </div>
+            <div>
+              <dt>Horario de respuesta</dt>
+              <dd>De lunes a viernes</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor">
+      <p>&copy; 2026 José Luis Romero Soto. Estudiante de ITS en la FIME-UANL, Monterrey, Nuevo León.</p>
+    </div>
+  </footer>
+</body>
+</html>
