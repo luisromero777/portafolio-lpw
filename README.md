@@ -3,7 +3,7 @@
 Sitio web responsivo, semántico y accesible hecho para la **Actividad 2** del Laboratorio de Programación Web (FIME-UANL).
 
 - **Alumno:** José Luis Romero Soto (matrícula 2038132)
-- **Sitio publicado:** `PEGAR AQUÍ EL LINK DE GITHUB PAGES`
+- **Sitio publicado:** https://luisromero777.github.io/portafolio-lpw/
 
 ## Objetivo
 
@@ -79,10 +79,10 @@ Móvil:
 
 | Herramienta | Archivo | Resultado |
 |---|---|---|
-| W3C Markup Validation Service | `index.html` | `PEGAR RESULTADO` |
-| W3C Markup Validation Service | `servicios.html` | `PEGAR RESULTADO` |
-| W3C Markup Validation Service | `contacto.html` | `PEGAR RESULTADO` |
-| W3C CSS Validation Service (Jigsaw) | `css/styles.css` | `PEGAR RESULTADO` |
+| W3C Markup Validation Service | `index.html` | Sin errores ni advertencias |
+| W3C Markup Validation Service | `servicios.html` | Sin errores ni advertencias |
+| W3C Markup Validation Service | `contacto.html` | Sin errores ni advertencias |
+| W3C CSS Validation Service (Jigsaw) | `css/styles.css` | Sin errores ni advertencias |
 
 ## Cómo ver el sitio en tu computadora
 
